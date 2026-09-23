@@ -1,15 +1,12 @@
 export interface NavProps extends React.ComponentProps<"nav"> {
   navname: string;
 }
-export const NavItem = ({ navname, onClick }: NavProps) => {
+export const NavItem = ({ navname, onClick, style }: NavProps) => {
   return (
     <>
-      <nav className="navItem">
-        <div className="nav-content" onClick={onClick}>
-          {navname}
-          <a></a>
-        </div>
-      </nav>
+      <div className="nav-content" onClick={onClick} style={style}>
+        {navname}
+      </div>
     </>
   );
 };

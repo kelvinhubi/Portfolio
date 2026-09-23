@@ -1,38 +1,47 @@
 import type { ReactNode } from "react";
-import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  NavLink,
+  Outlet,
+} from "react-router-dom";
 import { NavItem } from "./NavItem";
 import { About } from "./../../page/About";
 import { Home } from "./../../page/Home";
 import { Resume } from "./../../page/Resume";
 import { Projects } from "./../../page/Projects";
-export const NavMenu = ({ children }: { children: ReactNode }) => {
+import "./../../App.css";
+const navLinks = [
+  { path: "/", name: "Home", element: <Home /> },
+  { path: "/about", name: "About", element: <About /> },
+  { path: "/resume", name: "Resume", element: <Resume /> },
+  { path: "/projects", name: "Projects", element: <Projects /> },
+];
+export const NavMenu = () => {
   return (
     <>
       <BrowserRouter>
-        <Link to="/">
-          <NavItem onClick={Display} navname="Home" />
-        </Link>
-        <Link to="/about">
-          <NavItem onClick={Display} navname="About Me" />
-        </Link>
-        <Link to="/resume">
-          <NavItem onClick={Display} navname="Resume" />
-        </Link>
-        <Link to="/projects">
-          <NavItem onClick={Display} navname="Projects" />
-        </Link>
+        <nav>
+          {navLinks.map((link) => (
+            <NavLink
+              key={link.path}
+              to={link.path}
+              className={({ isActive }) =>
+                `nav-link-base ${isActive ? "isActive" : "inActive"}`
+              }
+            >
+              <NavItem navname={link.name} />
+            </NavLink>
+          ))}
+        </nav>
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/projects" element={<Projects />} />
+          {navLinks.map((route) => (
+            <Route key={route.path} path={route.path} element={route.element} />
+          ))}
         </Routes>
       </BrowserRouter>
     </>
   );
-};
-
-const Display = () => {
-  console.log("This works");
 };
