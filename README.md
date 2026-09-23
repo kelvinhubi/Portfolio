@@ -82,7 +82,7 @@ Created a Context used for global variables to easy access values ✔️
 
 create nested components like nav into menu and main content: ✔️
 
-apply css to the components: ongoing
+apply css to the components: ✔️
 
 
 Local State & Lifecycles (useState & useEffect): While Context is great for global variables (like user themes or auth status), useState handles local data (like forms or toggling a menu open/closed). useEffect handles side effects, like fetching data when a component loads.
