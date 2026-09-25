@@ -1,8 +1,9 @@
+import { Content } from "./Home/Content";
 export const Home = () => {
   return (
     <>
-      <div>
-        <h1>HOME</h1>
+      <div className="Main-Container">
+        <div>{<Content />}</div>
       </div>
     </>
   );

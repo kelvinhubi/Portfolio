@@ -22,25 +22,31 @@ export const NavMenu = () => {
   return (
     <>
       <BrowserRouter>
-        <nav>
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.path}
-              to={link.path}
-              className={({ isActive }) =>
-                `nav-link-base ${isActive ? "isActive" : "inActive"}`
-              }
-            >
-              <NavItem navname={link.name} />
-            </NavLink>
-          ))}
-        </nav>
+        <div>
+          <nav>
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.path}
+                to={link.path}
+                className={({ isActive }) =>
+                  `nav-link-base ${isActive ? "isActive" : "inActive"}`
+                }
+              >
+                <NavItem navname={link.name} />
+              </NavLink>
+            ))}
+          </nav>
 
-        <Routes>
-          {navLinks.map((route) => (
-            <Route key={route.path} path={route.path} element={route.element} />
-          ))}
-        </Routes>
+          <Routes>
+            {navLinks.map((route) => (
+              <Route
+                key={route.path}
+                path={route.path}
+                element={route.element}
+              />
+            ))}
+          </Routes>
+        </div>
       </BrowserRouter>
     </>
   );
