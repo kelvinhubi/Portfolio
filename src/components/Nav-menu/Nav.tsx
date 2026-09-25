@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import {
   BrowserRouter,
   Routes,
@@ -22,19 +21,23 @@ export const NavMenu = () => {
   return (
     <>
       <BrowserRouter>
-        <div>
+        <div className="navigation">
           <nav>
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.path}
-                to={link.path}
-                className={({ isActive }) =>
-                  `nav-link-base ${isActive ? "isActive" : "inActive"}`
-                }
-              >
-                <NavItem navname={link.name} />
-              </NavLink>
-            ))}
+            <ul>
+              {navLinks.map((link) => (
+                <li>
+                  <NavLink
+                    key={link.path}
+                    to={link.path}
+                    className={({ isActive }) =>
+                      `nav-link-base ${isActive ? "isActive" : "inActive"}`
+                    }
+                  >
+                    <NavItem navname={link.name} />
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
           </nav>
 
           <Routes>

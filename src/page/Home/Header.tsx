@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Header = () => {
   return (
     <header className="py-5 animate-fade-in">
@@ -24,18 +26,19 @@ export const Header = () => {
                 that solve real-world problems
               </p>
               <div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-                <a
-                  className="btn btn-outline-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
-                  href="https://kelvinryll-fortin-portfolio.infinityfreeapp.com/resume"
-                >
-                  <i className="bi bi-file-earmark-text me-2"></i>View Resume
-                </a>
-                <a
-                  className="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder"
-                  href="https://kelvinryll-fortin-portfolio.infinityfreeapp.com/projects"
-                >
-                  <i className="bi bi-code-square me-2"></i>My Projects
-                </a>
+                <Link to="/resume">
+                  <a className="btn btn-outline-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder">
+                    <i className="bi bi-file-earmark-text me-2"></i>View Resume
+                  </a>
+                </Link>
+                <Link to="/projects">
+                  <a
+                    className="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder"
+                    href="https://kelvinryll-fortin-portfolio.infinityfreeapp.com/projects"
+                  >
+                    <i className="bi bi-code-square me-2"></i>My Projects
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
