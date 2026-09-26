@@ -9,7 +9,6 @@ export const useValue = () => {
   }
   return context;
 };
-
 //This is used inside the structure of react mean its inside the tree when building react website
 export const ValueProvider = ({ children }: { children: ReactNode }) => {
   //This is the main code where all logic happens for authentication or such that needs to be accessed globally

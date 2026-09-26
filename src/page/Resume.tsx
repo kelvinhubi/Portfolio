@@ -1,9 +1,8 @@
+import { Content } from "./Resume/Content";
 export const Resume = () => {
   return (
-    <>
-      <div>
-        <h1>RESUME</h1>
-      </div>
-    </>
+    <div className="Main-Container">
+      <div>{<Content />}</div>
+    </div>
   );
 };
