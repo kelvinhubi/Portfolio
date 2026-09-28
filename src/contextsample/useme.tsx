@@ -1,6 +1,8 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState, type ReactNode } from "react";
 
-const ValueContext = createContext();
+type ValueContextValue = { value: string; setValue: (value: string) => void };
+const ValueContext = createContext<ValueContextValue | null>(null);
 //This is used to use the global values
 export const useValue = () => {
   const context = useContext(ValueContext);

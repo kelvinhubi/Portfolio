@@ -1,6 +1,6 @@
 import { useValue } from "../contextsample/useme";
 
-export interface ButtonProps extends React.ComponentProps<"button"> {}
+export type ButtonProps = React.ComponentProps<"button">;
 
 export const Button = ({ children }: ButtonProps) => {
   const { value, setValue } = useValue();
