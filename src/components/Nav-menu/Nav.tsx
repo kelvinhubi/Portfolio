@@ -1,10 +1,4 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  NavLink,
-  Outlet,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import { NavItem } from "./NavItem";
 import { About } from "./../../page/About";
 import { Home } from "./../../page/Home";
@@ -25,9 +19,8 @@ export const NavMenu = () => {
           <nav>
             <ul>
               {navLinks.map((link) => (
-                <li>
+                <li key={link.path}>
                   <NavLink
-                    key={link.path}
                     to={link.path}
                     className={({ isActive }) =>
                       `nav-link-base ${isActive ? "isActive" : "inActive"}`

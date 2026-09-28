@@ -3,7 +3,7 @@ import { Section } from "./Section";
 
 export const Content = () => {
   return (
-    <div className="Aboout-Content">
+    <div className="About-Content">
       <Header />
       <Section />
     </div>
