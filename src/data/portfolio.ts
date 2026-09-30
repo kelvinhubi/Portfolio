@@ -133,7 +133,7 @@ export const certificates = [
     date: "2025",
     name: "The AI For Communities Workshop",
     issuer: "Vjal Institute",
-    href: "#resume",
+    href: "https://cert.vjal.ai/certificate/?uid=6379391414141163746",
   },
   {
     date: "June 2022",

@@ -32,9 +32,9 @@ function Orb() {
     <group ref={group}>
       <Float speed={1.4} rotationIntensity={0.25} floatIntensity={0.45}>
         <mesh>
-          <icosahedronGeometry args={[1.65, 5]} />
+          <icosahedronGeometry args={[1.3, 2]} />
           <MeshDistortMaterial
-            color="#df765d"
+            color="#3f2721"
             roughness={0.2}
             metalness={0.55}
             distort={0.34}
@@ -42,9 +42,9 @@ function Orb() {
           />
         </mesh>
         <mesh scale={1.12}>
-          <icosahedronGeometry args={[1.65, 2]} />
+          <icosahedronGeometry args={[1.3, 2]} />
           <meshBasicMaterial
-            color="#f6b7a5"
+            color="#c4a5f6"
             wireframe
             transparent
             opacity={0.28}

@@ -265,7 +265,7 @@ a {
   text-align: right;
 }
 .project-glow {
-  background: #df765d;
+  background: #093d3a !important;
   inset: 0;
   opacity: 0;
   position: absolute;
